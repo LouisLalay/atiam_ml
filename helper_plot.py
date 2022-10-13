@@ -93,7 +93,7 @@ def plot_boundary(W,iVal,style,fig):
     xLims = plt.gca().get_xlim()
     for i in range(nUnits):
         if len(style) == 1:
-            color = [1, 1, 1]
+            color = [1, 0, 0]
         else:
             color = colors[int((3 * iVal + 9) % len(colors))]
         plt.plot(xLims,(-np.dot(W[i, 1], xLims) - W[i, 0]) / W[i, 2], linestyle=style, color=color, linewidth=1.5)
